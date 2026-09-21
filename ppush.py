@@ -1,8 +1,13 @@
 #!/usr/bin/env python
 __version__ = "1.1.0"
-import subprocess, os, sys, stat, shutil
-import requests as r
+import os
+import shutil
+import stat
+import subprocess
+import sys
 from pathlib import Path
+
+import requests as r
 from colorama import Fore
 
 w = Fore.WHITE
@@ -119,7 +124,7 @@ if __name__ == "__main__":
         if arg == "--refresh":
             refresh()
         elif arg == "--help":
-            commands = f"""
+            commands = """
 [ppush] Standard push with interactive commit message
 ppush [--help] Show this help message
 ppush [--refresh] Fetch new version from GitHub
